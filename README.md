@@ -15,11 +15,12 @@ for more details.
 **USE AT YOU OWN RISK!**
 
 ## Prerequisites:
--A working Linux. I tested using a live usb stick of Ubuntu 21.10.
--Installing "gcc" to compile the code: sudo apt install gcc
--A computer with SD card reader, I tested on an old Dell Latitude E6430.
--A SD adapter to fit the micro SD card
--A 32GB Micro SD card, Samsung Evo Plus SD, older than 2016. Note: Apparently, newer versions have a vulnerability patched, the one that was allowing to change the CID. It is possible that it works for other cards. There is a lot of information spread on several websites, refer to Raburton's website, the url is shared above.
+
+* A working Linux. I tested using a live usb stick of Ubuntu 21.10.
+* Installing "gcc" to compile the code: sudo apt install gcc
+* A computer with SD card reader, I tested on an old Dell Latitude E6430.
+* A SD adapter to fit the micro SD card
+* A 32GB Micro SD card, Samsung Evo Plus SD, older than 2016. Note: Apparently, newer versions have a vulnerability patched, the one that was allowing to change the CID. It is possible that it works for other cards. There is a lot of information spread on several websites, refer to Raburton's website, the url is shared above.
 
 
 ## Usage:
