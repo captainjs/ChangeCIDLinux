@@ -46,9 +46,10 @@ see: https://github.com/beaups/SamsungCID
 
 ## Operation instructions:
 
-These instructions are high level and expect a bit of know-how. 
+These instructions are high level and expect a bit of know-how. In this example we are going to use the evoplus_cid code to change the CID of a suitable micro SD card, to match a CID suitable for a Discover Media MIB2, inside a VW Car. The car is only accepting official and overpriced VW SD card, based on a list of allowed CID reference. Replacing the CID bypass that restriction and allow the user and car owner to use another SD card instead.
+
 * From the ubuntu live usb, insert the SD adapter containing the Micro SD card.
-* Find the mount point. Remember the prerequisite of having a SD card reader:
+* Find the mount point. Remember the prerequisite of having a SD card reader, otherwise the card won't be detected properly:
 find /sys -name cid -print
 It should return a very long output, looking a bit similar to: "/sys/devices/pci0000:00/0000:00:04.0/....". 
 Copy that entire line.
@@ -59,7 +60,9 @@ mount | grep mmc
 That command should return the mounted path for the SD card, for example:
 /dev/mmcblk0p1
 Note: if any other type of adapter was used, like USB, or even a SD card read on a newer computer, the SD card might appear as /dev/sdax, it probably won't work. Also, the device information required is not the full information, we won't use the ending (p1).
-* At this stage, it should be ready to run the command to change the cid, using the relevant information:
+
+* At this stage, it should be ready to run the command to change the cid, using the relevant information and the evoplus_cid script:
+Either git clone this repository or download the zip file in a specific folder. Once downloaded extract, and compile the code. Then it should be ready to use.
 
 sudo ./evoplus_cid /dev/mmcblk0 0941504d494253540219c2a601012300
 
@@ -68,5 +71,4 @@ The CID used above is an example of CID for a SD card for Discover media MIB2 (V
 * Verify: Unmount the SD card, reconnect it, and check that the CID was properly changed. The instructions to find the cid and view it are above.
 At this point the CID should be the new one we indicated above, like 09415... 
 
-Either git clone this repository or download the zip file in a specific folder. Once downloaded extract, and compile the code. Then it should be ready to use.
 
