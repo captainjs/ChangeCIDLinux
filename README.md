@@ -22,6 +22,12 @@ for more details.
 * A SD adapter to fit the micro SD card
 * A 32GB Micro SD card, Samsung Evo Plus SD, older than 2016. Note: Apparently, newer versions have a vulnerability patched, the one that was allowing to change the CID. It is possible that it works for other cards. There is a lot of information spread on several websites, refer to Raburton's website, the url is shared above.
 
+## Compile
+
+`gcc evoplus_cid.c -o evoplus_cid`
+
+If done properly, there should not be any compilation warnings.
+
 
 ## Usage:
 ```
@@ -38,8 +44,3 @@ serial - optional, can be hex (0x prefixed) or decimal
 Based on the reverse engineering and code of Sean Beaupre,
 see: https://github.com/beaups/SamsungCID
 
-## Compile
-
-`gcc evoplus_cid.c -o evoplus_cid`
-
-You can safely ignore compilation warnings.
