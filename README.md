@@ -1,4 +1,4 @@
-# Change CID Linux is a modified version of another git repository of Raburton called evoplus_cid:
+# Change CID Linux is a modified version of another git repository of Raburton called evoplus_cid that was made for Android:
 Source:
 https://github.com/raburton/evoplus_cid
 
