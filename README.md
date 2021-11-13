@@ -1,5 +1,7 @@
 # Change CID Linux is a modified version of another git repository of Raburton called evoplus_cid:
+Source:
 https://github.com/raburton/evoplus_cid
+
 That project was compiled for Android and requires rooted Android device.
 This project was modified to work under Linux.
 
@@ -11,6 +13,14 @@ See http://richard.burtons.org/2016/07/01/changing-the-cid-on-an-sd-card/
 for more details.
 
 **USE AT YOU OWN RISK!**
+
+## Prerequisites:
+-A working Linux. I tested using a live usb stick of Ubuntu 21.10.
+-Installing "gcc" to compile the code: sudo apt install gcc
+-A computer with SD card reader, I tested on an old Dell Latitude E6430.
+-A SD adapter to fit the micro SD card
+-A 32GB Micro SD card, Samsung Evo Plus SD, older than 2016. Note: Apparently, newer versions have a vulnerability patched, the one that was allowing to change the CID. It is possible that it works for other cards. There is a lot of information spread on several websites, refer to Raburton's website, the url is shared above.
+
 
 ## Usage:
 ```
