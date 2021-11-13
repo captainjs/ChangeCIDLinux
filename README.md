@@ -2,10 +2,10 @@
 Source:
 https://github.com/raburton/evoplus_cid
 
-That project was compiled for Android and requires rooted Android device.
+That original project was compiled for Android and requires rooted Android device.
 This project was modified to work under Linux.
 
-The following is a modified Readme based on the original work quoted above. It is a Tool to change the CID on Samsung Evo Plus SD Cards from Linux. 
+This is a modified Readme based on the original work quoted above. It is a Tool to change the CID on older Samsung Evo Plus SD Cards from Linux. 
 
 Precompiled Linux binary not included. It works on regular Linux, tested using a real sd controller, not a usb mass storage type sd reader.
 
