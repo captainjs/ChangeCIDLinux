@@ -3,6 +3,9 @@
 #include <fcntl.h>
 #include <arpa/inet.h>
 #include "mmc.h"
+#include <string.h>
+#include <unistd.h>
+#include <stdlib.h>
 
 #define CID_SIZE 16
 #define PROGRAM_CID_OPCODE 26
