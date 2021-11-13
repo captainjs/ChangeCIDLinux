@@ -7,7 +7,7 @@ This project was modified to work under Linux.
 
 This is a modified Readme based on the original work quoted above. It is a Tool to change the CID on older Samsung Evo Plus SD Cards from Linux. 
 
-Precompiled Linux binary not included. It works on regular Linux, tested using a real sd controller, not a usb mass storage type sd reader.
+Precompiled Linux binary also included. It works on regular Linux, tested using a real sd controller, not a usb mass storage type sd reader.
 
 See http://richard.burtons.org/2016/07/01/changing-the-cid-on-an-sd-card/
 for more details.
@@ -28,6 +28,7 @@ for more details.
 
 If done properly, there should not be any compilation warnings.
 
+A compiled version for Linux is available in the libs folder, the file is named evoplus_cid.
 
 ## Usage:
 ```
@@ -71,4 +72,5 @@ The CID used above is an example of CID for a SD card for Discover media MIB2 (V
 * Verify: Unmount the SD card, reconnect it, and check that the CID was properly changed. The instructions to find the cid and view it are above.
 At this point the CID should be the new one we indicated above, like 09415... 
 
+The above was tested and worked, the SD card with the replaced CID is visible and accepted by the car, and the VW maps working.
 
