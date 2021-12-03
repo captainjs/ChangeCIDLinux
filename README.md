@@ -20,7 +20,8 @@ for more details.
 * Installing "gcc" to compile the code: sudo apt install gcc
 * A computer with SD card reader, I tested on an old Dell Latitude E6430.
 * A SD adapter to fit the micro SD card
-* A 32GB Micro SD card, Samsung Evo Plus SD, older than 2016. Note: Apparently, newer versions have a vulnerability patched, the one that was allowing to change the CID. It is possible that it works for other cards. There is a lot of information spread on several websites, refer to Raburton's website, the url is shared above.
+* A 32GB micro SD card, Samsung Evo Plus SD, older than 2016. Note: Apparently, newer versions have a vulnerability patched, the one that was allowing to change the CID. It is possible that it works for other cards. There is a lot of information spread on several websites, refer to Raburton's website, the url is shared above.
+* The 32GB micro SD card has to be formatted in fat32.
 
 ## Compile
 
@@ -51,13 +52,13 @@ These instructions are high level and expect a bit of know-how. In this example 
 
 * From the ubuntu live usb, insert the SD adapter containing the Micro SD card.
 * Find the mount point. Remember the prerequisite of having a SD card reader, otherwise the card won't be detected properly:
-find /sys -name cid -print
+`find /sys -name cid -print`
 It should return a very long output, looking a bit similar to: "/sys/devices/pci0000:00/0000:00:04.0/....". 
 Copy that entire line.
-* View existing card's CID: more /sys/devices/pci0000:00/0000:00:04.0/...cid
+* View existing card's CID: `more /sys/devices/pci0000:00/0000:00:04.0/...cid`
 It's good practice to copy that somewhere, in case there is a need to revert the card CID (which is not needed in our scenario).
 * Find the card mount point:
-mount | grep mmc
+`mount | grep mmc`
 That command should return the mounted path for the SD card, for example:
 /dev/mmcblk0p1
 Note: if any other type of adapter was used, like USB, or even a SD card read on a newer computer, the SD card might appear as /dev/sdax, it probably won't work. Also, the device information required is not the full information, we won't use the ending (p1).
@@ -65,7 +66,7 @@ Note: if any other type of adapter was used, like USB, or even a SD card read on
 * At this stage, it should be ready to run the command to change the cid, using the relevant information and the evoplus_cid script:
 Either git clone this repository or download the zip file in a specific folder. Once downloaded extract, and compile the code. Then it should be ready to use.
 
-sudo ./evoplus_cid /dev/mmcblk0 0941504d494253540219c2a601012300
+`sudo ./evoplus_cid /dev/mmcblk0 0941504d494253540219c2a601012300`
 
 The CID used above is an example of CID for a SD card for Discover media MIB2 (VW Touran II  2016-), as found online and tested.
 
